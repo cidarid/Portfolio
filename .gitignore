@@ -4,6 +4,8 @@ dist/
 # generated types
 .astro/
 
+old-index.astro
+
 # dependencies
 node_modules/
 
