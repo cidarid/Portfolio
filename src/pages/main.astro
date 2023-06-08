@@ -1,0 +1,179 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Project from '../components/Project.astro';
+---
+
+<MainLayout title="Spencer Fletcher">
+    <nav>
+        <h1>Spencer Fletcher</h1>
+        <div>
+            <a>Home</a>
+            <a>Projects</a>
+        </div>
+    </nav>
+    <main>
+        <div id="about">
+            <h2>About Me</h2>
+            <p>Hi! I’m Spencer. I’ve been programming since 2014, and love what I do. I like to code things from the ground
+                up, and enjoy seeing my ideas come to life. I’ve made websites, games, web applications, and desktop
+                applications. I’m constantly looking to improve my skills, and I’d be excited to work with you!</p>
+        </div>
+        <div id="tools">
+            <h2>Tools & Frameworks</h2>
+            <div class="columns">
+                <div>
+                    <h3>Programming</h3>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Javascript</p>
+                    <p>Python</p>
+                    <p>Java</p>
+                    <p>C</p>
+                    <p>C#</p>
+                    <p>SQL</p>
+                </div>
+                <div>
+                    <h3>Tools</h3>
+                    <p>Netlify</p>
+                    <p>Bluehost</p>
+                    <p>Wordpress</p>
+                    <p>Git(hub)</p>
+                    <p>Unity</p>
+                </div>
+                <div>
+                    <h3>Frameworks</h3>
+                    <p>Django</p>
+                    <p>Next.js</p>
+                    <p>Bootstrap</p>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <Project
+                    title="Portfolio (ongoing)"
+                    body="A personal portfolio website (hint: you’re already here!)"
+                    tools="Next.js, Javascript, HTML, CSS, Netlify, Bluehost"
+                    code="https://github.com/locelus/Portfolio"
+                    proj="https://spencerfletcher.com/"
+                />
+                <Project
+                        title="CSC172 (2022)"
+                        body="A collection of Java projects and labs I produced for the University of Rochester's CSC172 course in Spring 2022."
+                        tools="Java"
+                        code="https://github.com/locelus/CSC172"
+                />
+                <Project
+                        title="CSC171 (2021)"
+                        body="A collection of Java projects and labs I produced for the University of Rochester's CSC171 course in Fall 2021."
+                        tools="Java"
+                        code="https://github.com/locelus/CSC171"
+                />
+                <Project
+                        title="Microspec Documentation (2021)"
+                        body="A documentation system used internally by Microspec Corporation (actual documentation is not listed on linked site for security purposes)."
+                        tools="Python, Django, HTML, CSS, SQL"
+                        code="https://github.com/locelus/Documentation/"
+                        proj="https://microspecdocumentation.herokuapp.com/doc/"
+                />
+                <Project
+                        title="CS50 (2018)"
+                        body="A collection of code I produced for Harvard's CS50 course."
+                        tools="C, Python, Javascript, CSS, HTML"
+                        code="https://github.com/locelus/CS50"
+                />
+                <div/>
+            </div>
+        </div>
+    </main>
+</MainLayout>
+
+
+<style>
+    nav {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        padding: 0 30px;
+        margin-top: 16px;
+    }
+    
+    nav > div {
+        margin-left: auto;
+        margin-right: 0;
+        display: flex;
+        align-content: flex-end;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    main {
+        text-align: center;
+        margin: 12% 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 88px;
+    }
+    
+    main > * h2, nav > h1 {
+        font-size: 32px;
+        font-weight: 500;
+    }
+    
+    main > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    h1, h2, h3, p, ul {
+        margin: 0;
+    }
+    
+    .columns {
+        display: flex;
+        flex-direction: row;
+        gap: 20px 15%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .columns > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    h3 {
+        font-size: 26px;
+        font-weight: 500;
+    }
+    
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-grid > div {
+        box-sizing: border-box;
+        flex-basis: 50%;
+        min-width: 250px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .project-grid > * h3 {
+        font-size: 20px;
+        font-weight: 450;
+    }
+    
+    a {
+        color: #f6f6f6;
+    }
+</style>
+
