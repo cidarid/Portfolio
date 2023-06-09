@@ -14,7 +14,7 @@ const { title, body, tools, code, proj } = Astro.props;
 <div class="project">
     <h3>{title}</h3>
     <p>{body}</p>
-    <p>Tools used: {tools}</p>
+    <p>{tools ? "Tools used: " + tools : null}</p>
     <div>
         <a href={code}>{code ? "Code" : null}</a>
         <br>
@@ -27,11 +27,13 @@ const { title, body, tools, code, proj } = Astro.props;
         box-sizing: border-box;
         flex-basis: 50%;
         min-width: 250px;
+        max-width: 500px;
         text-align: left;
         display: flex;
         flex-direction: column;
         gap: 10px;
         padding: 10px;
+        flex-grow: 1;
     }
 
     h3 {

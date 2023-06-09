@@ -82,7 +82,7 @@ import Project from '../components/Project.astro';
                         tools="C, Python, Javascript, CSS, HTML"
                         code="https://github.com/cidarid/CS50"
                 />
-                <div/>
+                <Project/>
             </div>
         </div>
     </main>
@@ -153,18 +153,6 @@ import Project from '../components/Project.astro';
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .project-grid > div {
-        box-sizing: border-box;
-        flex-basis: 50%;
-        min-width: 250px;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-        flex-grow: 1;
     }
 
     .project-grid > * h3 {
