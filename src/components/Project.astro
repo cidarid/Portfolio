@@ -16,9 +16,9 @@ const { title, body, tools, code, proj } = Astro.props;
     <p>{body}</p>
     <p>{tools ? "Tools used: " + tools : null}</p>
     <div>
-        <a href={code}>{code ? "Code" : null}</a>
+        <a href={code} target="_blank">{code ? "Code" : null}</a>
         <br>
-        <a href={proj}>{proj ? "Working Project" : null}</a>
+        <a href={proj} target="_blank">{proj ? "Working Project" : null}</a>
     </div>
 </div>
 
