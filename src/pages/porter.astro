@@ -1,0 +1,37 @@
+<h3>Old Marquee Text</h3>
+<textarea rows="3" id="old"></textarea>
+<br />
+<h3>New Marquee Text</h3>
+<textarea rows="3" id="new"></textarea>
+<p id="output">Output!</p>
+
+<script>
+  const oldInput: any = document.getElementById("old")!;
+  const newInput: any = document.getElementById("new")!;
+  const output = document.getElementById("output")!;
+
+  const inputHandler = function (e: any) {
+    let oldText: string = oldInput.value.toUpperCase();
+    let newText: string = newInput.value.toUpperCase();
+    for (let i = 0; i < oldText.length; i++) {
+      if (newText.includes(oldText[i])) {
+        newText = newText.replace(oldText[i], "");
+      }
+    }
+
+    newText = newText.split("").sort().join("").replace(" ", "");
+    let freq: any = {};
+    for (var i = 0; i < newText.length; i++) {
+      var char = newText.charAt(i);
+      freq[char] ? freq[char]++ : (freq[char] = 1);
+    }
+    newText = "";
+    for (const property in freq) {
+      newText += `${property}: ${freq[property]}\n`;
+    }
+    output.innerText = newText;
+  };
+
+  oldInput.addEventListener("input", inputHandler);
+  newInput.addEventListener("input", inputHandler);
+</script>
