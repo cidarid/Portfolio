@@ -25,7 +25,7 @@
       .split("")
       .sort()
       .join("")
-      .replaceAll(/[^A-Z0-9]/g, "");
+      .replaceAll(/[^\x21-x7e]/g, "");
     console.log(newText);
     let freq: any = {};
     for (var i = 0; i < newText.length; i++) {
