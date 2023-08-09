@@ -21,7 +21,13 @@
       }
     }
 
-    newText = newText.split("").sort().join("").replace(" ", "");
+    newText = newText
+      .split("")
+      .sort()
+      .join("")
+      .replaceAll(" ", "")
+      .replaceAll(/[^\x20-\x7E]/g, "");
+    console.log(newText);
     let freq: any = {};
     for (var i = 0; i < newText.length; i++) {
       var char = newText.charAt(i);
