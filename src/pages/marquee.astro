@@ -8,34 +8,44 @@
 <p id="output">Output!</p>
 
 <script>
+  // Gets old input
   const oldInput: any = document.getElementById("old")!;
+  // Gets new input
   const newInput: any = document.getElementById("new")!;
+  // Gets output element
   const output = document.getElementById("output")!;
 
+  // Takes input from both textareas and outputs the difference
   const inputHandler = function (e: any) {
     let oldText: string = oldInput.value.toUpperCase();
     let newText: string = newInput.value.toUpperCase();
+    // Removes all characters that are in oldText from newText
     for (let i = 0; i < oldText.length; i++) {
       if (newText.includes(oldText[i])) {
         newText = newText.replace(oldText[i], "");
       }
     }
 
+    // Sorts the string alphabetically and removes all non-ASCII characters
     newText = newText
       .split("")
       .sort()
       .join("")
       .replaceAll(/[^\x21-x7e]/g, "");
-    console.log(newText);
+
+    // Creates and fills a frequency table, sorted alphabetically
     let freq: any = {};
     for (var i = 0; i < newText.length; i++) {
       var char = newText.charAt(i);
       freq[char] ? freq[char]++ : (freq[char] = 1);
     }
     newText = "";
+    // e.g. 1 A, 2 Bs, 1 C
     for (const property in freq) {
-      newText += `${property}: ${freq[property]}\n`;
+      newText += `${freq[property]} ${property}s\n`;
     }
+
+    // Updates output element
     output.innerText = newText;
   };
 
