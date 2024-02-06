@@ -5,7 +5,10 @@
 <br />
 <h3>New Marquee Text</h3>
 <textarea rows="3" id="new"></textarea>
-<p id="output">Output!</p>
+<input type="checkbox" />Test
+<ul id="output">
+  <li>Output!</li>
+</ul>
 
 <script>
   // Gets old input
@@ -15,6 +18,20 @@
   // Gets output element
   const output = document.getElementById("output")!;
 
+  function newLi(text: string) {
+    let container = document.createElement("div");
+    let p = document.createElement("span");
+    p.innerText = text;
+    p.className = "astro-BH3I5LOA";
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = text;
+
+    container.appendChild(checkbox);
+    container.appendChild(p);
+
+    return container;
+  }
   // Takes input from both textareas and outputs the difference
   const inputHandler = function (e: any) {
     let oldText: string = oldInput.value.toUpperCase();
@@ -41,12 +58,13 @@
     }
     newText = "";
     // e.g. 1 A, 2 Bs, 1 C
+    output.innerHTML = "";
     for (const property in freq) {
-      newText += `${freq[property]} ${property}s\n`;
+      output.appendChild(newLi(`${freq[property]} ${property}s`));
     }
 
     // Updates output element
-    output.innerText = newText;
+    // output.innerText = newText;
   };
 
   oldInput.addEventListener("input", inputHandler);
@@ -64,5 +82,13 @@
 
   p {
     font-size: 1em;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  ul > li > span {
+    padding: 5px;
   }
 </style>
