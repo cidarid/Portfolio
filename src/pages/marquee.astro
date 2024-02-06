@@ -7,88 +7,88 @@
 <textarea rows="3" id="new"></textarea>
 <input type="checkbox" />Test
 <ul id="output">
-  <li>Output!</li>
+	<li>Output!</li>
 </ul>
 
 <script>
-  // Gets old input
-  const oldInput: any = document.getElementById("old")!;
-  // Gets new input
-  const newInput: any = document.getElementById("new")!;
-  // Gets output element
-  const output = document.getElementById("output")!;
+	// Gets old input
+	const oldInput: any = document.getElementById("old")!;
+	// Gets new input
+	const newInput: any = document.getElementById("new")!;
+	// Gets output element
+	const output = document.getElementById("output")!;
 
-  function newLi(text: string) {
-    let container = document.createElement("div");
-    let p = document.createElement("span");
-    p.innerText = text;
-    p.className = "astro-BH3I5LOA";
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.value = text;
+	function newLi(text: string) {
+		let container = document.createElement("div");
+		let p = document.createElement("span");
+		p.innerText = text;
+		p.className = "astro-BH3I5LOA";
+		let checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.value = text;
 
-    container.appendChild(checkbox);
-    container.appendChild(p);
+		container.appendChild(checkbox);
+		container.appendChild(p);
 
-    return container;
-  }
-  // Takes input from both textareas and outputs the difference
-  const inputHandler = function (e: any) {
-    let oldText: string = oldInput.value.toUpperCase();
-    let newText: string = newInput.value.toUpperCase();
-    // Removes all characters that are in oldText from newText
-    for (let i = 0; i < oldText.length; i++) {
-      if (newText.includes(oldText[i])) {
-        newText = newText.replace(oldText[i], "");
-      }
-    }
+		return container;
+	}
+	// Takes input from both textareas and outputs the difference
+	const inputHandler = function (e: any) {
+		let oldText: string = oldInput.value.toUpperCase();
+		let newText: string = newInput.value.toUpperCase();
+		// Removes all characters that are in oldText from newText
+		for (let i = 0; i < oldText.length; i++) {
+			if (newText.includes(oldText[i])) {
+				newText = newText.replace(oldText[i], "");
+			}
+		}
 
-    // Sorts the string alphabetically and removes all non-ASCII characters
-    newText = newText
-      .split("")
-      .sort()
-      .join("")
-      .replaceAll(/[^\x21-x7e]/g, "");
+		// Sorts the string alphabetically and removes all non-ASCII characters
+		newText = newText
+			.split("")
+			.sort()
+			.join("")
+			.replaceAll(/[^\x21-x7e]/g, "");
 
-    // Creates and fills a frequency table, sorted alphabetically
-    let freq: any = {};
-    for (var i = 0; i < newText.length; i++) {
-      var char = newText.charAt(i);
-      freq[char] ? freq[char]++ : (freq[char] = 1);
-    }
-    newText = "";
-    // e.g. 1 A, 2 Bs, 1 C
-    output.innerHTML = "";
-    for (const property in freq) {
-      output.appendChild(newLi(`${freq[property]} ${property}s`));
-    }
+		// Creates and fills a frequency table, sorted alphabetically
+		let freq: any = {};
+		for (var i = 0; i < newText.length; i++) {
+			var char = newText.charAt(i);
+			freq[char] ? freq[char]++ : (freq[char] = 1);
+		}
+		newText = "";
+		// e.g. 1 A, 2 Bs, 1 C
+		output.innerHTML = "";
+		for (const property in freq) {
+			output.appendChild(newLi(`${freq[property]} ${property}s`));
+		}
 
-    // Updates output element
-    // output.innerText = newText;
-  };
+		// Updates output element
+		// output.innerText = newText;
+	};
 
-  oldInput.addEventListener("input", inputHandler);
-  newInput.addEventListener("input", inputHandler);
+	oldInput.addEventListener("input", inputHandler);
+	newInput.addEventListener("input", inputHandler);
 </script>
 
 <style>
-  textarea {
-    min-width: 20em;
-  }
+	textarea {
+		min-width: 20em;
+	}
 
-  h3 {
-    font-size: 1.5em;
-  }
+	h3 {
+		font-size: 1.5em;
+	}
 
-  p {
-    font-size: 1em;
-  }
+	p {
+		font-size: 1em;
+	}
 
-  ul {
-    padding: 0;
-  }
+	ul {
+		padding: 0;
+	}
 
-  ul > li > span {
-    padding: 5px;
-  }
+	ul > li > span {
+		padding: 5px;
+	}
 </style>
