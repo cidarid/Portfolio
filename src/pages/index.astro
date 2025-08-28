@@ -123,7 +123,7 @@ import Project from "../components/Project.astro";
 				rel="noopener noreferrer"
 				aria-label="GitHub Profile"
 			>
-				<img src="/github.svg" height="24" width="24" />
+				<img src="/github.svg" height="24" width="24" alt="" />
 			</a>
 			<a
 				href="https://www.linkedin.com/in/spencer-fletcher-890b19237"
@@ -131,13 +131,16 @@ import Project from "../components/Project.astro";
 				rel="noopener noreferrer"
 				aria-label="LinkedIn Profile"
 			>
-				<img src="/linkedin.png" height="24" width="24" />
+				<img src="/linkedin.png" height="24" width="24" alt="" />
 			</a>
 		</footer>
 	</main>
 </MainLayout>
 
 <style>
+	* {
+		box-sizing: border-box;
+	}
 	nav {
 		width: 100%;
 		box-sizing: border-box;
