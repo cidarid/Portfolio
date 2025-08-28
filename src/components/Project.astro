@@ -3,11 +3,12 @@ export interface Props {
 	title: string;
 	body: string;
 	tools: string;
-	code: string;
+	code?: string;
 	proj?: string;
+	notes?: string;
 }
 
-const { title, body, tools, code, proj } = Astro.props;
+const { title, body, tools, code, proj, notes } = Astro.props;
 ---
 
 <div class="project">
@@ -16,8 +17,9 @@ const { title, body, tools, code, proj } = Astro.props;
 	<p>{tools ? "Tools used: " + tools : null}</p>
 	<div>
 		<a href={code} target="_blank">{code ? "Code" : null}</a>
-		<br />
+		{code && proj ? <br /> : null}
 		<a href={proj} target="_blank">{proj ? "Working Project" : null}</a>
+		{notes ? <p>{notes}</p> : null}
 	</div>
 </div>
 
