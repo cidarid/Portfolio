@@ -7,7 +7,7 @@ import Project from "../components/Project.astro";
 	<nav>
 		<h1>Spencer Fletcher</h1>
 		<div>
-			<a>Projects</a>
+			<a href="#projects">Projects</a>
 		</div>
 	</nav>
 	<main>
@@ -229,18 +229,25 @@ import Project from "../components/Project.astro";
 </style>
 
 <script>
-	const buttons = document.querySelectorAll("nav > * a");
+	document.addEventListener("DOMContentLoaded", () => {
+		const navLinks = document.querySelectorAll("nav a[href^='#']");
 
-	// Handle clicks on each button.
-	buttons.forEach((button) => {
-		button.addEventListener("click", () => {
-			smoothScroll();
+		navLinks.forEach((link) => {
+			// Use an arrow function here
+			link.addEventListener("click", (event) => {
+				event.preventDefault();
+
+				// Use the 'link' variable directly instead of 'this'
+				const targetId = link.getAttribute("href");
+				if (!targetId) return;
+				const targetElement = document.querySelector(targetId);
+
+				if (targetElement) {
+					targetElement.scrollIntoView({
+						behavior: "smooth",
+					});
+				}
+			});
 		});
 	});
-
-	function smoothScroll() {
-		document.querySelector("#projects")?.scrollIntoView({
-			behavior: "smooth",
-		});
-	}
 </script>
