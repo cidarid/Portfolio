@@ -11,7 +11,7 @@ import Project from "../components/Project.astro";
 		</div>
 	</nav>
 	<main>
-		<div id="about">
+		<section id="about">
 			<h2>About Me</h2>
 			<p>
 				Hi, I’m Spencer! I'm a full-stack developer who loves building
@@ -21,8 +21,8 @@ import Project from "../components/Project.astro";
 				always looking for opportunities to apply my skills and contribute to a
 				collaborative team.
 			</p>
-		</div>
-		<div id="tools">
+		</section>
+		<section id="tools">
 			<h2>Tools & Frameworks</h2>
 			<div class="columns">
 				<div>
@@ -51,8 +51,8 @@ import Project from "../components/Project.astro";
 					<p>Bootstrap</p>
 				</div>
 			</div>
-		</div>
-		<div id="projects">
+		</section>
+		<section id="projects">
 			<h2>Projects</h2>
 			<div class="project-grid">
 				<Project
@@ -108,7 +108,7 @@ import Project from "../components/Project.astro";
 				/>
 				 -->
 			</div>
-		</div>
+		</section>
 
 		<span id="links">
 			<a
@@ -167,7 +167,7 @@ import Project from "../components/Project.astro";
 		font-weight: 500;
 	}
 
-	main > div {
+	main > section {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
