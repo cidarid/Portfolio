@@ -13,14 +13,25 @@ const { title, body, tools, code, proj, notes } = Astro.props;
 
 <div class="project">
 	<h3>{title}</h3>
-	<p>{body}</p>
+	<p set:html={body} />
 	<p class="tech-pill-container">
 		{tools.map((tool) => <span class="tech-pill">{tool}</span>)}
 	</p>
-	<div>
-		<a href={code} target="_blank">{code ? "View Code" : null}</a>
-		{code && proj ? <br /> : null}
-		<a href={proj} target="_blank">{proj ? "Live Project" : null}</a>
+	<div class="links">
+		{
+			code ? (
+				<a href={code} target="_blank">
+					View Code
+				</a>
+			) : null
+		}
+		{
+			proj ? (
+				<a href={proj} target="_blank">
+					Live Project
+				</a>
+			) : null
+		}
 		{notes ? <p>{notes}</p> : null}
 	</div>
 </div>
@@ -28,9 +39,8 @@ const { title, body, tools, code, proj, notes } = Astro.props;
 <style>
 	div.project {
 		box-sizing: border-box;
-		flex-basis: 50%;
+		flex-basis: 100%;
 		min-width: 250px;
-		max-width: 500px;
 		text-align: left;
 		display: flex;
 		flex-direction: column;
@@ -74,5 +84,11 @@ const { title, body, tools, code, proj, notes } = Astro.props;
 		font-weight: 500;
 		color: #f6f6f6;
 		/* margin: 3px; */ /* <--- Remove this line */
+	}
+
+	.project > .links {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
 	}
 </style>
