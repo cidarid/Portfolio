@@ -2,7 +2,7 @@
 export interface Props {
 	title: string;
 	body: string;
-	tools: string;
+	tools: string[];
 	code?: string;
 	proj?: string;
 	notes?: string;
@@ -14,7 +14,10 @@ const { title, body, tools, code, proj, notes } = Astro.props;
 <div class="project">
 	<h3>{title}</h3>
 	<p>{body}</p>
-	<p>{tools ? "Tools used: " + tools : null}</p>
+	<p>
+		Tools used:
+		{tools.map((tool) => <span class="tech-pill">{tool}</span>)}
+	</p>
 	<div>
 		<a href={code} target="_blank">{code ? "View Code" : null}</a>
 		{code && proj ? <br /> : null}
@@ -52,5 +55,23 @@ const { title, body, tools, code, proj, notes } = Astro.props;
 
 	a:hover {
 		color: #0d6efd;
+	}
+
+	.tech-pill {
+		display: inline-flex;
+		align-items: center;
+		padding: 4px 12px;
+		background-color: #5d5cb6; /* Light Gray */
+		border-radius: 9999px; /* Creates the pill shape */
+		font-size: 0.875rem; /* 14px */
+		font-weight: 500;
+		color: #f6f6f6; /* Dark Gray */
+		margin: 3px;
+	}
+
+	.pill-icon {
+		width: 16px;
+		height: 16px;
+		margin-right: 8px; /* Space between icon and text */
 	}
 </style>
