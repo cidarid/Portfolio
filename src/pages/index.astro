@@ -14,11 +14,12 @@ import Project from "../components/Project.astro";
 		<div id="about">
 			<h2>About Me</h2>
 			<p>
-				Hi! I’m Spencer. I’ve been programming since 2014, and love what I do. I
-				like to code things from the ground up, and enjoy seeing my ideas come
-				to life. I’ve made websites, games, web applications, and desktop
-				applications. I’m constantly looking to improve my skills, and I’d be
-				excited to work with you!
+				Hi, I’m Spencer! I'm a full-stack developer who loves building
+				performant, data-driven backends. Since I started programming in 2014,
+				I've brought ideas to life across a variety of platforms, including web,
+				desktop, and mobile applications. I thrive on new challenges and am
+				always looking for opportunities to apply my skills and contribute to a
+				collaborative team.
 			</p>
 		</div>
 		<div id="tools">
@@ -57,14 +58,7 @@ import Project from "../components/Project.astro";
 				<Project
 					title="Portfolio (ongoing)"
 					body="A personal portfolio website (hint: you’re already here!)"
-					tools={[
-						"Next.js",
-						"Javascript",
-						"HTML",
-						"CSS",
-						"Netlify",
-						"Bluehost",
-					]}
+					tools={["Astro", "HTML", "CSS", "Netlify"]}
 					code="https://github.com/cidarid/portfolio-astro"
 					proj="https://spencerfletcher.com/"
 				/>
@@ -115,6 +109,25 @@ import Project from "../components/Project.astro";
 				 -->
 			</div>
 		</div>
+
+		<span id="links">
+			<a
+				href="https://github.com/cidarid"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="GitHub Profile"
+			>
+				<img src="/github.svg" height="24" width="24" />
+			</a>
+			<a
+				href="https://www.linkedin.com/in/spencer-fletcher-890b19237"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="LinkedIn Profile"
+			>
+				<img src="/linkedin.png" height="24" width="24" />
+			</a>
+		</span>
 	</main>
 </MainLayout>
 
@@ -138,10 +151,10 @@ import Project from "../components/Project.astro";
 
 	main {
 		text-align: center;
-		margin: 12% 10%;
+		margin: 6% 10%;
 		display: flex;
 		flex-direction: column;
-		gap: 88px;
+		gap: 70px;
 	}
 
 	nav > h1 {
@@ -202,6 +215,10 @@ import Project from "../components/Project.astro";
 		color: #f6f6f6;
 		text-decoration: none;
 		cursor: pointer;
+	}
+
+	#links > a {
+		margin: 0px 20px;
 	}
 </style>
 
