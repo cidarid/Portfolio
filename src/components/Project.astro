@@ -15,7 +15,6 @@ const { title, body, tools, code, proj, notes } = Astro.props;
 	<h3>{title}</h3>
 	<p>{body}</p>
 	<p>
-		Tools used:
 		{tools.map((tool) => <span class="tech-pill">{tool}</span>)}
 	</p>
 	<div>
