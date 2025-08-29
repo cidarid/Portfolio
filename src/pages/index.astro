@@ -5,7 +5,10 @@ import Project from "../components/Project.astro";
 
 <MainLayout title="Spencer Fletcher | Full Stack Web Developer Portfolio">
 	<nav>
-		<h1>Spencer Fletcher</h1>
+		<span>
+			<h1>Spencer Fletcher</h1>
+			<p class="subtitle">Full Stack Developer</p>
+		</span>
 		<div>
 			<a href="#projects">Projects</a>
 		</div>
@@ -14,7 +17,7 @@ import Project from "../components/Project.astro";
 		<section id="about">
 			<h2>About Me</h2>
 			<p>
-				Hi, I’m Spencer! I'm a full-stack developer who loves building
+				Hi, I’m Spencer! I'm a full stack developer who loves building
 				performant, data-driven backends. Since I started programming in 2014,
 				I've brought ideas to life across a variety of platforms, including web,
 				desktop, and mobile applications. I thrive on new challenges and am
@@ -166,8 +169,8 @@ import Project from "../components/Project.astro";
 		gap: 70px;
 	}
 
-	nav > h1 {
-		font-size: 24px;
+	h1 {
+		font-size: 32px;
 		font-weight: 500;
 	}
 
@@ -229,6 +232,11 @@ import Project from "../components/Project.astro";
 
 	#links > a {
 		margin: 0px 20px;
+	}
+
+	.subtitle {
+		font-size: 20px;
+		font-weight: 400;
 	}
 </style>
 
