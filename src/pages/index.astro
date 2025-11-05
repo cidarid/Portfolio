@@ -22,8 +22,20 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 		<div class="container">
 			<main>
 				<header>
-					<h1>Spencer Fletcher</h1>
-					<p class="subtitle">Full Stack Developer</p>
+					<div class="header-content">
+						<h1>Spencer Fletcher</h1>
+						<p class="subtitle">Full Stack Developer</p>
+					</div>
+
+					<div class="header-cta">
+						<a href="mailto:spencer@spencerfletcher.com" class="cta-button"
+							>Email Now</a
+						>
+						<a
+							href="/Spencer Fletcher.pdf"
+							class="cta-button cta-button-secondary">View Resume</a
+						>
+					</div>
 				</header>
 				<section class="about">
 					<p>
@@ -38,94 +50,81 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 
 				<section class="projects">
 					<h2>Projects</h2>
-					<article>
-						<h3>Cadaver Donation Website</h3>
-						<p>
-							Redesigned and launched a new public webpage for the University of
-							British Columbia's Cadaver Donation Program, driving a 100%+
-							increase in donations. Commissioned by UBC. I implemented the new
-							design improving layout, accessibility, and load performance. This
-							website is best viewed in desktop format.
-						</p>
-						<div class="tags">
-							<span class="tag">HTML</span>
-							<span class="tag">CSS</span>
-							<span class="tag">JavaScript</span>
-							<span class="tag">Wordpress</span>
-						</div>
-						<div class="links">
-							<a href="https://github.com/cidarid/body-donation-site"
-								>View Code</a
-							>
-							<a href="https://cps.med.ubc.ca/body-donation/">Live Project</a>
-						</div>
-					</article>
+					<div class="projects-container">
+						<article>
+							<h3>Cadaver Donation Website</h3>
+							<p>
+								Redesigned and launched a new public webpage for the University
+								of British Columbia's Cadaver Donation Program, driving a 100%+
+								increase in donations. I implemented the new design improving
+								layout, accessibility, and load performance. Best viewed in
+								desktop format.
+							</p>
+							<div class="tags">
+								<span class="tag">HTML</span>
+								<span class="tag">CSS</span>
+								<span class="tag">JavaScript</span>
+								<span class="tag">Wordpress</span>
+							</div>
+							<div class="links">
+								<a href="https://github.com/cidarid/body-donation-site"
+									>View Code</a
+								>
+								<a href="https://cps.med.ubc.ca/body-donation/">Live Project</a>
+							</div>
+						</article>
 
-					<article>
-						<h3>Hollywood Theatre Tip Management</h3>
-						<p>
-							The Hollywood Theatre hired me as a freelance worker to automate
-							and modernize a couple of their systems. I built them a web-based
-							marquee updater and a tip splitting system, saving 5+ hours of
-							manual work weekly.
-						</p>
-						<div class="tags">
-							<span class="tag">HTML</span>
-							<span class="tag">CSS</span>
-							<span class="tag">JavaScript</span>
-							<span class="tag">Google Apps Script</span>
-						</div>
-						<p class="note">No link available for security reasons.</p>
-					</article>
+						<article>
+							<h3>Hollywood Theatre Tip Management</h3>
+							<p>
+								The Hollywood Theatre hired me as a freelance worker to automate
+								and modernize a couple of their systems. I built them a
+								web-based marquee updater and a tip splitting system, saving 5+
+								hours of manual work weekly.
+							</p>
+							<div class="tags">
+								<span class="tag">HTML</span>
+								<span class="tag">CSS</span>
+								<span class="tag">JavaScript</span>
+								<span class="tag">Google Apps Script</span>
+							</div>
+							<p class="note">No link available for security reasons.</p>
+						</article>
 
-					<article>
-						<h3>Portfolio (ongoing)</h3>
-						<p>A personal portfolio website (hint: you're already here!)</p>
-						<div class="tags">
-							<span class="tag">Astro</span>
-							<span class="tag">HTML</span>
-							<span class="tag">CSS</span>
-							<span class="tag">Netlify</span>
-						</div>
-						<div class="links">
-							<a href="https://github.com/cidarid/portfolio-astro">View Code</a>
-							<a href="https://spencerfletcher.com/">Live Project</a>
-						</div>
-					</article>
+						<article>
+							<h3>Collaborative Recipe Book (ongoing)</h3>
+							<p>
+								I'm currently building a full-stack recipe app with SvelteKit
+								and PostgreSQL. It's designed to let users save their own
+								recipes, collaborate with others, and browse public ones. It
+								also handles user authentication and image storage.
+							</p>
+							<div class="tags">
+								<span class="tag">SvelteKit</span>
+								<span class="tag">PostgreSQL</span>
+							</div>
+							<div class="links">
+								<a href="https://github.com/cidarid/RecipeBook">View Code</a>
+							</div>
+						</article>
 
-					<article>
-						<h3>Collaborative Recipe Book (ongoing)</h3>
-						<p>
-							I'm currently building a full-stack recipe app with SvelteKit and
-							PostgreSQL. It's designed to let users save their own recipes,
-							collaborate with others, and browse public ones. It also handles
-							user authentication and image storage.
-						</p>
-						<div class="tags">
-							<span class="tag">SvelteKit</span>
-							<span class="tag">PostgreSQL</span>
-						</div>
-						<div class="links">
-							<a href="https://github.com/cidarid/RecipeBook">View Code</a>
-						</div>
-					</article>
-
-					<article>
-						<h3>CPSC317</h3>
-						<p>
-							A collection of C & Java projects and labs I produced for the
-							University of British Columbia's CPSC317 Computer Networking
-							course in Spring 2025. These projects vary from a DNS resolver to
-							a POP3 email server.
-						</p>
-						<div class="tags">
-							<span class="tag">C</span>
-							<span class="tag">Java</span>
-						</div>
-						<div class="links">
-							<a href="https://github.com/cidarid/CPSC317">View Code</a>
-						</div>
-					</article>
+						<article>
+							<h3>CPSC317</h3>
+							<p>
+								A collection of C & Java projects and labs I produced for the
+								University of British Columbia's CPSC317 Computer Networking
+								course in Spring 2025. These projects vary from a DNS resolver
+								to a POP3 email server.
+							</p>
+							<div class="tags">
+								<span class="tag">C</span>
+								<span class="tag">Java</span>
+							</div>
+							<div class="links">
+								<a href="https://github.com/cidarid/CPSC317">View Code</a>
+							</div>
+						</article>
+					</div>
 				</section>
 
 				<section class="tools">
@@ -155,17 +154,6 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 								<li>Chai</li>
 								<li>Git</li>
 								<li>Unity</li>
-							</ul>
-						</div>
-						<div>
-							<h3>AI</h3>
-							<ul>
-								<li>Markov Decision Processes</li>
-								<li>Markov Networks</li>
-								<li>Reinforcement Learning</li>
-								<li>Ontologies</li>
-								<li>Temporal Inference</li>
-								<li>Context Free Grammars</li>
 							</ul>
 						</div>
 					</div>
@@ -289,8 +277,29 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 		}
 
 		/* Projects Section */
+		/* ...and CHANGE it to this. We just need to remove the margin. */
 		.projects article {
-			margin-bottom: 2.5rem;
+			/* margin-bottom is no longer needed, 'gap' will handle it */
+		}
+
+		/* ADD these new rules for the flex container and items */
+		.projects-container {
+			display: flex;
+			flex-wrap: wrap; /* This is key to "shrinking" to 1 column */
+			gap: 1.5rem; /* This replaces your old margin-bottom */
+		}
+
+		.projects-container article {
+			/* This is the magic rule.
+      - flex-grow: 1 (items can grow to fill extra space)
+      - flex-shrink: 1 (items can shrink)
+      - flex-basis: 200px (items *want* to be 200px wide)
+      
+      On your 900px wide container, this will fit 4 articles per row (4 * 200px + gaps).
+      On a narrow mobile screen, 200px won't fit, so 'flex-wrap' will 
+      force each article onto its own line, creating your 1-column stack.
+    */
+			flex: 1 1 400px;
 		}
 
 		.tags {
@@ -332,9 +341,17 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 			margin-bottom: 4rem;
 		}
 
-		h2,
+		h2 {
+			margin-bottom: 1rem;
+		}
+
 		header {
 			margin-bottom: 1rem;
+			display: flex;
+			flex-wrap: wrap; /* Allows buttons to stack on small screens */
+			justify-content: space-between;
+			align-items: center;
+			gap: 1.5rem; /* Adds space between title and buttons, especially when stacked */
 		}
 
 		.social-links {
@@ -362,6 +379,50 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 
 		.social-links a:hover img {
 			opacity: 1;
+		}
+
+		/* --- Header CTA Buttons --- */
+
+		.header-cta {
+			display: flex;
+			gap: 1rem; /* Space between the two buttons */
+			flex-shrink: 0; /* Prevents buttons from shrinking awkwardly */
+		}
+
+		.cta-button {
+			display: inline-block;
+			padding: 0.65rem 1.25rem;
+			border-radius: 8px; /* Rounded corners */
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 0.9rem;
+			transition: all 0.2s ease;
+			border: 2px solid var(--text-color);
+			line-height: 1.2;
+		}
+
+		/* Primary button style (Email) */
+		.cta-button {
+			background-color: var(--text-color);
+			color: var(--bg-color); /* Inverted colors */
+		}
+
+		.cta-button:hover {
+			background-color: transparent;
+			color: var(--text-color);
+			text-decoration: none;
+		}
+
+		/* Secondary "ghost" button style (Resume) */
+		.cta-button-secondary {
+			background-color: transparent;
+			color: var(--text-color);
+		}
+
+		.cta-button-secondary:hover {
+			background-color: var(--text-color);
+			color: var(--bg-color); /* Inverted on hover */
+			text-decoration: none;
 		}
 
 		/* Responsive adjustments */
