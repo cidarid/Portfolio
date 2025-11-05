@@ -1,265 +1,359 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Project from "../components/Project.astro";
+// src/pages/index.astro
+const pageTitle = "Spencer Fletcher | Full Stack Developer";
 ---
 
-<MainLayout title="Spencer Fletcher | Full Stack Web Developer Portfolio">
-	<nav>
-		<span>
-			<h1>Spencer Fletcher</h1>
-			<p class="subtitle">Full Stack Developer</p>
-		</span>
-		<div>
-			<a href="#projects">Projects</a>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{pageTitle}</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<main>
+				<header>
+					<h1>Spencer Fletcher</h1>
+					<p class="subtitle">Full Stack Developer</p>
+				</header>
+				<section class="about">
+					<p>
+						Hi, I'm Spencer! I'm a full stack developer who loves building
+						performant, data-driven backends. Since I started programming in
+						2014, I've brought ideas to life across a variety of platforms,
+						including web, video game, and robotics projects. I thrive on new
+						challenges and am always looking for opportunities to apply my
+						skills and contribute to a collaborative team.
+					</p>
+				</section>
+
+				<section class="projects">
+					<h2>Projects</h2>
+
+					<article>
+						<h3>Portfolio (ongoing)</h3>
+						<p>A personal portfolio website (hint: you're already here!)</p>
+						<div class="tags">
+							<span class="tag">Astro</span>
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">Netlify</span>
+						</div>
+						<div class="links">
+							<a href="https://github.com/cidarid/portfolio-astro">View Code</a>
+							<a href="https://spencerfletcher.com/">Live Project</a>
+						</div>
+					</article>
+
+					<article>
+						<h3>Cadaver Donation Website</h3>
+						<p>
+							Redesigned and launched a new public webpage for the University of
+							British Columbia's Cadaver Donation Program, driving a 100%+
+							increase in donations. Commissioned by UBC. I implemented the new
+							design improving layout, accessibility, and load performance. This
+							website is best viewed in desktop format.
+						</p>
+						<div class="tags">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">Wordpress</span>
+						</div>
+						<div class="links">
+							<a href="https://github.com/cidarid/body-donation-site"
+								>View Code</a
+							>
+							<a href="https://cps.med.ubc.ca/body-donation/">Live Project</a>
+						</div>
+					</article>
+
+					<article>
+						<h3>Hollywood Theatre Tip Management</h3>
+						<p>
+							The Hollywood Theatre hired me as a freelance worker to automate
+							and modernize their tip splitting system. Once completed, this
+							system saved over 5 hours a week.
+						</p>
+						<div class="tags">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">Google Apps Script</span>
+						</div>
+						<p class="note">No link available for security reasons.</p>
+					</article>
+
+					<article>
+						<h3>CPSC317</h3>
+						<p>
+							A collection of C & Java projects and labs I produced for the
+							University of British Columbia's CPSC317 Computer Networking
+							course in Spring 2025. These projects vary from a DNS resolver to
+							a POP3 email server.
+						</p>
+						<div class="tags">
+							<span class="tag">C</span>
+							<span class="tag">Java</span>
+						</div>
+						<div class="links">
+							<a href="https://github.com/cidarid/CPSC317">View Code</a>
+						</div>
+					</article>
+				</section>
+
+				<section class="tools">
+					<h2>Technical Skills</h2>
+					<div class="tools-grid">
+						<div>
+							<h3>Programming</h3>
+							<ul>
+								<li>Python</li>
+								<li>JavaScript</li>
+								<li>TypeScript</li>
+								<li>C/C++</li>
+								<li>Assembly</li>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>Java</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Tools</h3>
+							<ul>
+								<li>Next.js</li>
+								<li>React (Native)</li>
+								<li>Django</li>
+								<li>Svelte(kit)</li>
+								<li>SQL</li>
+								<li>Chai</li>
+								<li>Git</li>
+								<li>Unity</li>
+							</ul>
+						</div>
+						<div>
+							<h3>AI</h3>
+							<ul>
+								<li>Markov Decision Processes</li>
+								<li>Markov Networks</li>
+								<li>Reinforcement Learning</li>
+								<li>Ontologies</li>
+								<li>Temporal Inference</li>
+								<li>Context Free Grammars</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="social-links">
+				<a
+					href="https://github.com/cidarid"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="GitHub Profile"
+				>
+					<img src="/github.svg" height="24" width="24" alt="" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/spencer-fletcher-890b19237"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="LinkedIn Profile"
+				>
+					<img src="/linkedin.png" height="24" width="24" alt="" />
+				</a>
+			</footer>
 		</div>
-	</nav>
-	<main>
-		<section id="about">
-			<h2>About Me</h2>
-			<p>
-				Hi, I’m Spencer! I'm a full stack developer who loves building
-				performant, data-driven backends. Since I started programming in 2014,
-				I've brought ideas to life across a variety of platforms, including web,
-				desktop, and mobile applications. I thrive on new challenges and am
-				always looking for opportunities to apply my skills and contribute to a
-				collaborative team.
-			</p>
-		</section>
-		<section id="tools">
-			<h2>Tools & Frameworks</h2>
-			<div class="columns">
-				<div>
-					<h3>Programming</h3>
-					<p>Python</p>
-					<p>JavaScript</p>
-					<p>TypeScript</p>
-					<p>C/C++</p>
-					<p>Assembly</p>
-					<p>HTML</p>
-					<p>CSS</p>
-					<p>Java</p>
-				</div>
-				<div>
-					<h3>Tools</h3>
-					<p>Next.js</p>
-					<p>React (Native)</p>
-					<p>Django</p>
-					<p>Svelte(kit)</p>
-					<p>SQL</p>
-					<p>Chai</p>
-					<p>Git</p>
-					<p>Unity</p>
-				</div>
-				<div>
-					<h3>AI</h3>
-					<p>Markov Decision Processes</p>
-					<p>Markov Networks</p>
-					<p>Reinforcement Learning</p>
-					<p>Ontologies</p>
-					<p>Temporal Inference</p>
-					<p>Context Free Grammars</p>
-				</div>
-			</div>
-		</section>
-		<section id="projects">
-			<h2>Projects</h2>
-			<div class="project-grid">
-				<Project
-					title="Portfolio (ongoing)"
-					body="A personal portfolio website (hint: you’re already here!)"
-					tools={["Astro", "HTML", "CSS", "Netlify"]}
-					code="https://github.com/cidarid/portfolio-astro"
-					proj="https://spencerfletcher.com/"
-				/>
-				<Project
-					title="Cadaver Donation Website"
-					body="Redesigned and launched a new public webpage for the University of British Columbia's Cadaver Donation Program, driving a 100%+ increase in donations. Commissioned by UBC, I implemented the new design improving layout, accessibility, and load performance. This website is best viewed in desktop format."
-					tools={["HTML", "CSS", "Javascript", "Wordpress"]}
-					code="https://github.com/cidarid/body-donation-site"
-					proj="https://cps.med.ubc.ca/body-donation/"
-				/>
-				<Project
-					title="Hollywood Theatre Tip Management"
-					body="The Hollywood Theatre hired me as a freelance worker to automate and modernize their tip splitting system. Once completed, this system saved over 5 hours a week."
-					tools={["HTML", "CSS", "Google Apps Script"]}
-					notes="No link available for security reasons."
-				/>
-				<Project
-					title="CPSC317"
-					body="A collection of C & Java projects and labs I produced for the University of British Columbia's CPSC317 Computer Networking course in Spring 2025. These projects vary from a DNS resolver to a POP3 email server."
-					tools={["C", "Java"]}
-					code="https://github.com/cidarid/CPSC317"
-				/>
-				<!--
-				<Project
-					title="Software Engineering Main Project (2023)"
-					body="Built a custom query language in TypeScript with a Svelte front end to visualize course data. Unit tested with Chai and course data stored using SQL."
-					tools="C, Java"
-					code="https://github.com/cidarid/CPSC310"
-				/>
-				<Project
-					title="Computer Systems, Low-Level Projects (2023)"
-					body="A collection of C & Java projects and labs I produced for the University of British Columbia's CPSC213 course in Spring 2023."
-					tools="C, Java, Assembly (SM213)"
-					code="https://github.com/cidarid/CPSC213"
-				/>
-				<Project
-					title="CSC172 (2022)"
-					body="A collection of Java projects and labs I produced for the University of Rochester's CSC172 course in Spring 2022."
-					tools="Java"
-					code="https://github.com/cidarid/CSC172"
-				/>
-				<Project
-					title="CSC171 (2021)"
-					body="A collection of Java projects and labs I produced for the University of Rochester's CSC171 course in Fall 2021."
-					tools="Java"
-					code="https://github.com/cidarid/CSC171"
-				/>
-				 -->
-			</div>
-		</section>
+	</body>
 
-		<footer id="links">
-			<a
-				href="https://github.com/cidarid"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="GitHub Profile"
-			>
-				<img src="/github.svg" height="24" width="24" alt="" />
-			</a>
-			<a
-				href="https://www.linkedin.com/in/spencer-fletcher-890b19237"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="LinkedIn Profile"
-			>
-				<img src="/linkedin.png" height="24" width="24" alt="" />
-			</a>
-		</footer>
-	</main>
-</MainLayout>
+	<style is:global>
+		/* Using is:global for simplicity, as this is the main page component.
+      You could also move this to a separate .css file and import it.
+    */
+		:root {
+			--bg-color: #7877e6;
+			--text-color: #ffffff;
+			--tag-bg: #5d5cb6; /* A slightly darker shade for contrast */
+			--font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+				Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+				"Segoe UI Emoji", "Segoe UI Symbol";
+		}
 
-<style>
-	* {
-		box-sizing: border-box;
-	}
-	nav {
-		width: 100%;
-		box-sizing: border-box;
-		display: flex;
-		padding: 0 30px;
-		margin-top: 16px;
-	}
+		body {
+			background-color: var(--bg-color);
+			color: var(--text-color);
+			font-family: var(--font-family);
+			margin: 0;
+			padding: 2rem 2rem;
+			display: flex;
+			justify-content: center;
+			line-height: 1.6;
+		}
 
-	nav > div {
-		margin-left: auto;
-		margin-right: 0;
-		display: flex;
-		align-content: flex-end;
-		gap: 10px;
-		align-items: center;
-	}
+		* {
+			margin: 0;
+		}
 
-	main {
-		text-align: center;
-		margin: 6% 13%;
-		display: flex;
-		flex-direction: column;
-		gap: 70px;
-	}
+		.container {
+			max-width: 900px;
+			width: 100%;
+		}
 
-	h1 {
-		font-size: 32px;
-		font-weight: 500;
-	}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: 600;
+		}
 
-	main > * h2 {
-		font-size: 32px;
-		font-weight: 500;
-	}
+		h1 {
+			font-size: 2.5rem;
+			margin-bottom: -0.5rem;
+		}
 
-	main > section {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
+		h3 {
+			margin-bottom: 0.5rem;
+		}
 
-	h1,
-	h2,
-	h3,
-	p,
-	ul {
-		margin: 0;
-	}
+		.subtitle {
+			font-size: 1.5rem;
+			margin-top: 0;
+			font-weight: 300;
+			opacity: 0.9;
+		}
 
-	.columns {
-		display: flex;
-		flex-direction: row;
-		gap: 20px 12%;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
+		h2 {
+			font-size: 2rem;
+			margin-bottom: 0;
+		}
 
-	.columns > div {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-	}
+		h3 {
+			font-size: 1.25rem;
+		}
 
-	h3 {
-		font-size: 26px;
-		font-weight: 500;
-	}
+		a {
+			color: var(--text-color);
+			text-decoration: underline;
+			font-weight: 500;
+		}
 
-	.project-grid {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 20px;
-	}
+		a:hover {
+			text-decoration: none;
+		}
 
-	.project-grid > * h3 {
-		font-size: 20px;
-		font-weight: 400;
-	}
+		/* Tools Section */
+		.tools-grid {
+			display: grid;
+			/* Create 3 columns on desktop, stacking on mobile */
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1.5rem;
+		}
 
-	a {
-		color: #f6f6f6;
-		text-decoration: none;
-		cursor: pointer;
-	}
+		.tools-grid ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
 
-	#links > a {
-		margin: 0px 20px;
-	}
+		.tools-grid li {
+			margin-bottom: 0.5rem;
+		}
 
-	.subtitle {
-		font-size: 20px;
-		font-weight: 400;
-	}
-</style>
+		/* Projects Section */
+		.projects article {
+			margin-bottom: 2.5rem;
+		}
 
-<script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const navLinks = document.querySelectorAll("nav a[href^='#']");
+		.tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin: 1rem 0;
+		}
 
-		navLinks.forEach((link) => {
-			// Use an arrow function here
-			link.addEventListener("click", (event) => {
-				event.preventDefault();
+		.tag {
+			background-color: var(--tag-bg);
+			padding: 0.25rem 0.75rem;
+			border-radius: 1rem;
+			font-size: 0.875rem;
+			font-weight: 500;
+		}
 
-				// Use the 'link' variable directly instead of 'this'
-				const targetId = link.getAttribute("href");
-				if (!targetId) return;
-				const targetElement = document.querySelector(targetId);
+		.links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+		}
 
-				if (targetElement) {
-					targetElement.scrollIntoView({
-						behavior: "smooth",
-					});
-				}
-			});
-		});
-	});
-</script>
+		.note {
+			font-style: italic;
+			opacity: 0.8;
+			font-size: 0.9rem;
+		}
+
+		p {
+			margin-bottom: 0rem;
+		}
+
+		main {
+			margin-top: 2rem;
+		}
+
+		section {
+			margin-bottom: 4rem;
+		}
+
+		h2,
+		header {
+			margin-bottom: 1rem;
+		}
+
+		/* UPDATED STYLES FOR SOCIAL LINKS */
+		.social-links {
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+			margin-top: 5rem;
+			margin-bottom: 2rem;
+		}
+
+		.social-links a {
+			text-decoration: none;
+		}
+
+		/* Style the <img> tags */
+		.social-links img {
+			width: 32px;
+			height: 32px;
+			opacity: 0.8;
+			transition: opacity 0.2s ease;
+
+			/* This filter forces the images to be white, matching the text */
+			filter: brightness(0) invert(1);
+		}
+
+		.social-links a:hover img {
+			opacity: 1;
+		}
+		/* END OF UPDATED STYLES */
+		/* Responsive adjustments */
+		@media (min-width: 768px) {
+			body {
+				padding: 3rem;
+			}
+			.tools-grid {
+				/* Force 3 columns on larger screens */
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+	</style>
+</html>
