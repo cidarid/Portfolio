@@ -1,6 +1,6 @@
 ---
 // src/pages/index.astro
-const pageTitle = "Spencer Fletcher | Full Stack Developer";
+const pageTitle = "Spencer Fletcher | Software Engineer";
 ---
 
 <html lang="en">
@@ -24,7 +24,7 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 				<header>
 					<div class="header-content">
 						<h1>Spencer Fletcher</h1>
-						<p class="subtitle">Full Stack Developer | UBC Computer Science</p>
+						<p class="subtitle">Software Engineer | UBC Computer Science</p>
 					</div>
 
 					<div class="header-cta">
@@ -43,12 +43,11 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 				<section class="about">
 					<p>Hi, I'm Spencer!</p>
 					<p>
-						I'm a UBC computer science student and full stack developer who
-						loves building performant, data-driven backends. Since I started
-						programming in 2014, I've brought ideas to life across a variety of
-						platforms, including web, video game, and robotics projects. I
-						thrive on new challenges and am always looking for opportunities to
-						apply my skills and contribute to a collaborative team.
+						I'm a UBC computer science student (3.9 Major GPA) with experience
+						across the stack — from SvelteKit web apps to Clang/LLVM static
+						analysis tooling. I've built full-stack platforms, systems-level
+						tools, and mobile apps, and I'm looking for software engineering
+						roles starting fall 2025.
 					</p>
 				</section>
 
@@ -56,18 +55,39 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 					<h2>Projects</h2>
 					<div class="projects-container">
 						<article>
-							<h3>Cadaver Donation Website</h3>
+							<h3>MemoryGuard (2024)</h3>
 							<p>
-								Redesigned the webpage for the University of British Columbia's
-								Cadaver Donation Program, driving a 100%+ increase in donations.
-								I implemented the new design, improving layout, accessibility,
-								and load performance. Best viewed in desktop format.
+								A Clang/LLVM-based memory safety tool for C programs. Combines
+								static instrumentation with dynamic runtime analysis to detect
+								dangling pointers, memory leaks, and double-frees — generating
+								annotated, syntax-highlighted error reports with precise source
+								locations.
+							</p>
+							<div class="tags">
+								<span class="tag">C++</span>
+								<span class="tag">Clang/LLVM</span>
+								<span class="tag">CMake</span>
+								<span class="tag">Python</span>
+							</div>
+							<div class="links">
+								<a target="_blank" href="https://github.com/cidarid/MemoryGuard"
+									>View Code</a
+								>
+							</div>
+						</article>
+
+						<article>
+							<h3>Cadaver Donation Website (2023)</h3>
+							<p>
+								Redesigned the University of British Columbia's Cadaver Donation
+								Program webpage, driving a 100%+ increase in donations through
+								improved UX, accessibility, and load performance.
 							</p>
 							<div class="tags">
 								<span class="tag">HTML</span>
 								<span class="tag">CSS</span>
 								<span class="tag">JavaScript</span>
-								<span class="tag">Wordpress</span>
+								<span class="tag">WordPress</span>
 							</div>
 							<div class="links">
 								<a
@@ -82,33 +102,17 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 						</article>
 
 						<article>
-							<h3>Hollywood Theatre Tip Management</h3>
-							<p>
-								The Hollywood Theatre hired me as a freelance worker to automate
-								and modernize some of their systems. I built them a web-based
-								marquee updater and a tip splitting system, saving 5+ hours of
-								manual work weekly.
-							</p>
-							<div class="tags">
-								<span class="tag">HTML</span>
-								<span class="tag">CSS</span>
-								<span class="tag">JavaScript</span>
-								<span class="tag">Google Apps Script</span>
-							</div>
-							<p class="note">No link available for security reasons.</p>
-						</article>
-
-						<article>
 							<h3>Collaborative Recipe Book (ongoing)</h3>
 							<p>
-								I'm currently building a full-stack recipe app with SvelteKit
-								and PostgreSQL. It's designed to let users save their own
-								recipes, collaborate with others, and browse public ones. It
-								also handles user authentication and image storage.
+								A full-stack recipe platform featuring git-style version control
+								for tracking recipe modifications and forking others' recipes.
+								Built with SvelteKit and PostgreSQL, with user authentication,
+								image storage, and a public recipe feed.
 							</p>
 							<div class="tags">
 								<span class="tag">SvelteKit</span>
 								<span class="tag">PostgreSQL</span>
+								<span class="tag">TypeScript</span>
 							</div>
 							<div class="links">
 								<a target="_blank" href="https://github.com/cidarid/RecipeBook"
@@ -118,22 +122,36 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 						</article>
 
 						<article>
-							<h3>CPSC317 (Computer Networking)</h3>
+							<h3>Remote Control Mobile App (ongoing)</h3>
 							<p>
-								A collection of C & Java projects and labs I produced for the
-								University of British Columbia's CPSC317 Computer Networking
-								course in Spring 2025. These projects vary from a DNS resolver
-								to a POP3 email server.
+								A Swift iOS app that turns your phone into a remote input device
+								for desktop control — supporting mouse, media, and presentation
+								control over a local network.
 							</p>
 							<div class="tags">
-								<span class="tag">C</span>
-								<span class="tag">Java</span>
+								<span class="tag">Swift</span>
+								<span class="tag">iOS</span>
 							</div>
 							<div class="links">
-								<a target="_blank" href="https://github.com/cidarid/CPSC317"
-									>View Code</a
+								<a
+									target="_blank"
+									href="https://github.com/cidarid/RemoteControl">View Code</a
 								>
 							</div>
+						</article>
+
+						<article>
+							<h3>Hollywood Theatre Automation (2024)</h3>
+							<p>
+								Freelance tooling for the Hollywood Theatre in Vancouver — a
+								web-based marquee letter tracker and a tip-splitting system,
+								saving 5+ hours of manual work weekly.
+							</p>
+							<div class="tags">
+								<span class="tag">JavaScript</span>
+								<span class="tag">Google Apps Script</span>
+							</div>
+							<p class="note">No link available for security reasons.</p>
 						</article>
 					</div>
 				</section>
@@ -145,37 +163,35 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 							<h3>Programming</h3>
 							<ul>
 								<li>Python</li>
-								<li>JavaScript</li>
 								<li>TypeScript</li>
+								<li>JavaScript</li>
+								<li>Java</li>
 								<li>C/C++</li>
 								<li>Assembly</li>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>Java</li>
+								<li>Erlang</li>
+								<li>R</li>
 							</ul>
 						</div>
 						<div>
-							<h3>Tools</h3>
+							<h3>Web & Frameworks</h3>
 							<ul>
+								<li>SvelteKit</li>
 								<li>Next.js</li>
-								<li>React (Native)</li>
 								<li>Django</li>
-								<li>Svelte(kit)</li>
-								<li>SQL</li>
-								<li>Chai</li>
-								<li>Git</li>
-								<li>Unity</li>
+								<li>Node.js</li>
+								<li>React Native</li>
+								<li>Tailwind</li>
 							</ul>
 						</div>
 						<div>
-							<h3>AI</h3>
+							<h3>Tools & Infrastructure</h3>
 							<ul>
-								<li>Markov Decision Processes</li>
-								<li>Markov Networks</li>
-								<li>Reinforcement Learning</li>
-								<li>Ontologies</li>
-								<li>Temporal Inference</li>
-								<li>Context Free Grammars</li>
+								<li>Git</li>
+								<li>Docker</li>
+								<li>PostgreSQL</li>
+								<li>AWS</li>
+								<li>CI/CD</li>
+								<li>Clang/LLVM</li>
 							</ul>
 						</div>
 					</div>
@@ -204,16 +220,14 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 	</body>
 
 	<style is:global>
-		/* Using is:global for simplicity, as this is the main page component.
-      You could also move this to a separate .css file and import it.
-    */
 		:root {
 			--bg-color: #7877e6;
 			--text-color: #ffffff;
-			--tag-bg: #5d5cb6; /* A slightly darker shade for contrast */
-			--font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-				Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
-				"Segoe UI Emoji", "Segoe UI Symbol";
+			--tag-bg: #5d5cb6;
+			--font-family:
+				"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+				Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+				"Segoe UI Symbol";
 		}
 
 		body {
@@ -283,7 +297,6 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 		/* Tools Section */
 		.tools-grid {
 			display: grid;
-			/* Create 3 columns on desktop, stacking on mobile */
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 			gap: 1.5rem;
 		}
@@ -299,29 +312,16 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 		}
 
 		/* Projects Section */
-		/* ...and CHANGE it to this. We just need to remove the margin. */
-		.projects article {
-			/* margin-bottom is no longer needed, 'gap' will handle it */
-		}
-
-		/* ADD these new rules for the flex container and items */
 		.projects-container {
 			display: flex;
-			flex-wrap: wrap; /* This is key to "shrinking" to 1 column */
-			gap: 1.5rem; /* This replaces your old margin-bottom */
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			justify-content: center;
 		}
 
 		.projects-container article {
-			/* This is the magic rule.
-      - flex-grow: 1 (items can grow to fill extra space)
-      - flex-shrink: 1 (items can shrink)
-      - flex-basis: 200px (items *want* to be 200px wide)
-      
-      On your 900px wide container, this will fit 4 articles per row (4 * 200px + gaps).
-      On a narrow mobile screen, 200px won't fit, so 'flex-wrap' will 
-      force each article onto its own line, creating your 1-column stack.
-    */
 			flex: 1 1 400px;
+			flex-grow: 0;
 		}
 
 		.tags {
@@ -370,10 +370,10 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 		header {
 			margin-bottom: 1rem;
 			display: flex;
-			flex-wrap: wrap; /* Allows buttons to stack on small screens */
+			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			gap: 1.5rem; /* Adds space between title and buttons, especially when stacked */
+			gap: 1.5rem;
 		}
 
 		.social-links {
@@ -388,14 +388,11 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 			text-decoration: none;
 		}
 
-		/* Style the <img> tags */
 		.social-links img {
 			width: 32px;
 			height: 32px;
 			opacity: 0.8;
 			transition: opacity 0.2s ease;
-
-			/* This filter forces the images to be white, matching the text */
 			filter: brightness(0) invert(1);
 		}
 
@@ -403,18 +400,16 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 			opacity: 1;
 		}
 
-		/* --- Header CTA Buttons --- */
-
 		.header-cta {
 			display: flex;
-			gap: 1rem; /* Space between the two buttons */
-			flex-shrink: 0; /* Prevents buttons from shrinking awkwardly */
+			gap: 1rem;
+			flex-shrink: 0;
 		}
 
 		.cta-button {
 			display: inline-block;
 			padding: 0.65rem 1.25rem;
-			border-radius: 8px; /* Rounded corners */
+			border-radius: 8px;
 			text-decoration: none;
 			font-weight: 600;
 			font-size: 0.9rem;
@@ -423,10 +418,9 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 			line-height: 1.2;
 		}
 
-		/* Primary button style (Email) */
 		.cta-button {
 			background-color: var(--text-color);
-			color: var(--bg-color); /* Inverted colors */
+			color: var(--bg-color);
 		}
 
 		.cta-button:hover {
@@ -435,7 +429,6 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 			text-decoration: none;
 		}
 
-		/* Secondary "ghost" button style (Resume) */
 		.cta-button-secondary {
 			background-color: transparent;
 			color: var(--text-color);
@@ -443,17 +436,15 @@ const pageTitle = "Spencer Fletcher | Full Stack Developer";
 
 		.cta-button-secondary:hover {
 			background-color: var(--text-color);
-			color: var(--bg-color); /* Inverted on hover */
+			color: var(--bg-color);
 			text-decoration: none;
 		}
 
-		/* Responsive adjustments */
 		@media (min-width: 768px) {
 			body {
 				padding: 3rem;
 			}
 			.tools-grid {
-				/* Force 3 columns on larger screens */
 				grid-template-columns: 1fr 1fr 1fr;
 			}
 		}
