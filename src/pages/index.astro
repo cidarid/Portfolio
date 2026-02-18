@@ -14,7 +14,7 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=DM+Mono:wght@400;500&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
@@ -23,38 +23,44 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 			<main>
 				<header>
 					<div class="header-content">
+						<p class="eyebrow">UBC Computer Science · 3.9 GPA · US Citizen</p>
 						<h1>Spencer Fletcher</h1>
-						<p class="subtitle">Software Engineer | UBC Computer Science</p>
+						<p class="subtitle">
+							I like building things end-to-end: I've worked on compiler
+							tooling, full-stack web platforms, and mobile apps. Right now I'm
+							deep in parallel computing and security coursework and overhauling
+							my recipe platform. Looking for software engineering roles
+							starting fall 2026.
+						</p>
 					</div>
 
 					<div class="header-cta">
 						<a
 							target="_blank"
 							href="mailto:spencer@spencerfletcher.com"
-							class="cta-button">Email Now</a
+							class="cta-button">Email Me</a
 						>
 						<a
 							target="_blank"
 							href="/Spencer Fletcher.pdf"
-							class="cta-button cta-button-secondary">View Resume</a
+							class="cta-button cta-button-secondary">Resume ↗</a
 						>
 					</div>
 				</header>
-				<section class="about">
-					<p>
-						I'm a UBC computer science student (3.9 Major GPA) with experience
-						across the stack — from SvelteKit web apps to Clang/LLVM static
-						analysis tooling. I've built full-stack platforms, systems-level
-						tools, and mobile apps, and I'm looking for software engineering
-						roles starting fall 2025.
-					</p>
-				</section>
 
 				<section class="projects">
 					<h2>Projects</h2>
+
 					<div class="projects-container">
-						<article>
-							<h3>MemoryGuard (2024)</h3>
+						<article
+							class="featured"
+							onclick="window.open('https://github.com/cidarid/MemoryGuard', '_blank')"
+							role="link"
+							tabindex="0"
+						>
+							<div class="featured-label">Featured</div>
+							<h3>MemoryGuard</h3>
+							<span class="year">2024</span>
 							<p>
 								A Clang/LLVM-based memory safety tool for C programs. Combines
 								static instrumentation with dynamic runtime analysis to detect
@@ -70,17 +76,23 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 							</div>
 							<div class="links">
 								<a target="_blank" href="https://github.com/cidarid/MemoryGuard"
-									>View Code</a
+									>View Code →</a
 								>
 							</div>
 						</article>
 
-						<article>
-							<h3>Cadaver Donation Website (2023)</h3>
+						<article
+							onclick="window.open('https://cps.med.ubc.ca/body-donation/', '_blank')"
+							role="link"
+							tabindex="0"
+						>
+							<h3>UBC Student Developer</h3>
+							<span class="year">2022-2023</span>
 							<p>
-								Redesigned the University of British Columbia's Cadaver Donation
-								Program webpage, driving a 100%+ increase in donations through
-								improved UX, accessibility, and load performance.
+								Redesigned UBC's Cadaver Donation Program webpage, driving a
+								<strong>100%+ increase in donations</strong>. Also overhauled a
+								staff directory serving hundreds of users, improving
+								<strong>search speed by 250%</strong>.
 							</p>
 							<div class="tags">
 								<span class="tag">HTML</span>
@@ -92,21 +104,27 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 								<a
 									target="_blank"
 									href="https://github.com/cidarid/body-donation-site"
-									>View Code</a
+									>View Code →</a
 								>
 								<a target="_blank" href="https://cps.med.ubc.ca/body-donation/"
-									>Live Project</a
+									>Live Project →</a
 								>
 							</div>
 						</article>
 
-						<article>
-							<h3>Collaborative Recipe Book (ongoing)</h3>
+						<article
+							onclick="window.open('https://github.com/cidarid/RecipeBook', '_blank')"
+							role="link"
+							tabindex="0"
+						>
+							<h3>Collaborative Recipe Book</h3>
+							<span class="year">In Development</span>
 							<p>
-								A full-stack recipe platform featuring git-style version control
-								for tracking recipe modifications and forking others' recipes.
-								Built with SvelteKit and PostgreSQL, with user authentication,
-								image storage, and a public recipe feed.
+								A full-stack recipe platform with <strong
+									>Git-style version control</strong
+								> for tracking recipe modifications and forking others' recipes. Built
+								with SvelteKit and PostgreSQL, featuring user auth, image storage,
+								and a public feed.
 							</p>
 							<div class="tags">
 								<span class="tag">SvelteKit</span>
@@ -115,13 +133,18 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 							</div>
 							<div class="links">
 								<a target="_blank" href="https://github.com/cidarid/RecipeBook"
-									>View Code</a
+									>View Code →</a
 								>
 							</div>
 						</article>
 
-						<article>
-							<h3>Remote Control Mobile App (ongoing)</h3>
+						<article
+							onclick="window.open('https://github.com/cidarid/RemoteControl', '_blank')"
+							role="link"
+							tabindex="0"
+						>
+							<h3>Remote Control Mobile App</h3>
+							<span class="year">In Development</span>
 							<p>
 								A Swift iOS app that turns your phone into a remote input device
 								for desktop control — supporting mouse, media, and presentation
@@ -134,64 +157,51 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 							<div class="links">
 								<a
 									target="_blank"
-									href="https://github.com/cidarid/RemoteControl">View Code</a
+									href="https://github.com/cidarid/RemoteControl">View Code →</a
 								>
 							</div>
 						</article>
 
 						<article>
-							<h3>Hollywood Theatre Automation (2024)</h3>
+							<h3>Hollywood Theatre Automation</h3>
+							<span class="year">2024 · Freelance</span>
 							<p>
-								Freelance tooling for the Hollywood Theatre in Vancouver — a
+								Built tooling for the Hollywood Theatre in Vancouver — a
 								web-based marquee letter tracker and a tip-splitting system,
-								saving 5+ hours of manual work weekly.
+								saving <strong>5+ hours of manual work weekly</strong>.
 							</p>
 							<div class="tags">
 								<span class="tag">JavaScript</span>
 								<span class="tag">Google Apps Script</span>
 							</div>
-							<p class="note">No link available for security reasons.</p>
+							<p class="note">Source unavailable — client project.</p>
 						</article>
 					</div>
 				</section>
 
 				<section class="tools">
 					<h2>Technical Skills</h2>
-					<div class="tools-grid">
-						<div>
+					<div class="skills-inline">
+						<div class="skill-group">
 							<h3>Programming</h3>
-							<ul>
-								<li>Python</li>
-								<li>TypeScript</li>
-								<li>JavaScript</li>
-								<li>Java</li>
-								<li>C/C++</li>
-								<li>Assembly</li>
-								<li>Erlang</li>
-								<li>R</li>
-							</ul>
+							<p>
+								Python · TypeScript · JavaScript · Java · C/C++ · Assembly ·
+								Erlang · R
+							</p>
 						</div>
-						<div>
+						<div class="skill-group">
 							<h3>Web & Frameworks</h3>
-							<ul>
-								<li>SvelteKit</li>
-								<li>Next.js</li>
-								<li>Django</li>
-								<li>Node.js</li>
-								<li>React Native</li>
-								<li>Tailwind</li>
-							</ul>
+							<p>
+								SvelteKit · Next.js · Django · Node.js · React Native · Tailwind
+							</p>
 						</div>
-						<div>
-							<h3>Tools & Infrastructure</h3>
-							<ul>
-								<li>Git</li>
-								<li>Docker</li>
-								<li>PostgreSQL</li>
-								<li>AWS</li>
-								<li>CI/CD</li>
-								<li>Clang/LLVM</li>
-							</ul>
+						<div class="skill-group">
+							<h3>Infrastructure</h3>
+							<p>Git · Docker · PostgreSQL · AWS · CI/CD · Clang/LLVM</p>
+						</div>
+						<div class="skill-group">
+							<h3>Languages</h3>
+							<p>Spanish · German (Conversational)</p>
 						</div>
 					</div>
 				</section>
@@ -214,270 +224,409 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 				>
 					<img src="/linkedin.png" height="24" width="24" alt="" />
 				</a>
+				<span class="footer-email">spencer@spencerfletcher.com</span>
 			</footer>
 		</div>
+		<script>
+			document
+				.querySelectorAll(".projects-container article .links a")
+				.forEach((a) => {
+					a.addEventListener("click", (e) => e.stopPropagation());
+				});
+		</script>
 	</body>
 
 	<style is:global>
 		:root {
-			--bg-color: #7877e6;
-			--text-color: #ffffff;
-			--tag-bg: rgba(255, 255, 255, 0.2);
-			--font-family:
-				"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-				Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-				"Segoe UI Symbol";
-		}
-
-		body {
-			background-color: var(--bg-color);
-			color: var(--text-color);
-			font-family: var(--font-family);
-			margin: 0;
-			padding: 2rem 2rem;
-			display: flex;
-			justify-content: center;
-			line-height: 1.6;
+			--bg-primary: #0f0f13;
+			--bg-card: #1a1a23;
+			--bg-card-hover: #22222e;
+			--bg-featured: #1c1c2e;
+			--text-primary: #f0eff4;
+			--text-secondary: #a09fb1;
+			--accent: #8b7cf7;
+			--accent-glow: rgba(139, 124, 247, 0.15);
+			--accent-subtle: rgba(139, 124, 247, 0.08);
+			--border: rgba(255, 255, 255, 0.06);
+			--font-body:
+				"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			--font-mono: "DM Mono", "SF Mono", monospace;
 		}
 
 		* {
 			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: var(--bg-primary);
+			color: var(--text-primary);
+			font-family: var(--font-body);
+			margin: 0;
+			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			line-height: 1.65;
+			-webkit-font-smoothing: antialiased;
 		}
 
 		.container {
-			max-width: 900px;
+			max-width: 860px;
 			width: 100%;
 		}
 
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-weight: 600;
-		}
-
+		/* Typography */
 		h1 {
-			font-size: 2.5rem;
-			margin-bottom: -0.5rem;
-		}
-
-		h3 {
-			margin-bottom: 0.5rem;
-		}
-
-		.subtitle {
-			font-size: 1.5rem;
-			margin-top: 0;
-			font-weight: 300;
-			opacity: 0.9;
+			font-size: 3rem;
+			font-weight: 700;
+			letter-spacing: -0.03em;
+			line-height: 1.1;
+			margin-bottom: 1.25rem;
 		}
 
 		h2 {
-			font-size: 2rem;
-			margin-bottom: 0;
+			font-size: 1.1rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+			color: var(--text-secondary);
+			margin-bottom: 1.25rem;
 		}
 
 		h3 {
-			font-size: 1.25rem;
+			font-size: 1.2rem;
+			font-weight: 600;
+			margin-bottom: 0;
 		}
 
 		a {
-			color: var(--text-color);
-			text-decoration: underline;
+			color: var(--accent);
+			text-decoration: none;
 			font-weight: 500;
+			transition: color 0.2s ease;
 		}
 
 		a:hover {
-			text-decoration: none;
-		}
-
-		/* Tools Section */
-		.tools-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 1.5rem;
-		}
-
-		.tools-grid ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-
-		.tools-grid li {
-			margin-bottom: 0.5rem;
-		}
-
-		/* Projects Section */
-		.projects-container {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 1.5rem;
-		}
-
-		.projects-container article:last-child:nth-child(odd) {
-			grid-column: 1;
-		}
-
-		.projects-container article {
-			flex: 1 1 400px;
-			background: rgba(0, 0, 0, 0.15);
-			border-radius: 12px;
-			padding: 1.5rem;
-			display: flex;
-			flex-direction: column;
-		}
-
-		.tags {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.5rem;
-			margin: 1rem 0;
-		}
-
-		.projects-container article h3 {
-			font-size: 1.4rem;
-		}
-
-		.tag {
-			background-color: var(--tag-bg);
-			padding: 0.25rem 0.75rem;
-			border-radius: 1rem;
-			font-size: 0.875rem;
-			font-weight: 500;
-		}
-
-		.links {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 1.5rem;
-			margin-top: auto;
-		}
-
-		.links a {
-			text-decoration: none;
-			border: 1.5px solid rgba(255, 255, 255, 0.7);
-			padding: 0.3rem 0.8rem;
-			border-radius: 6px;
-			font-size: 0.875rem;
-			transition: all 0.2s ease;
-		}
-
-		.links a:hover {
-			background: rgba(255, 255, 255, 0.15);
-		}
-
-		.note {
-			font-style: italic;
-			opacity: 0.8;
-			font-size: 0.9rem;
-			margin-top: auto;
+			color: var(--text-primary);
 		}
 
 		p {
-			margin-bottom: 0rem;
+			margin-bottom: 0;
+		}
+
+		strong {
+			color: var(--text-primary);
+			font-weight: 600;
 		}
 
 		main {
-			margin-top: 2rem;
+			margin-top: 3rem;
 		}
 
 		section {
 			margin-bottom: 4rem;
 		}
 
-		h2 {
-			margin-bottom: 1rem;
-		}
-
+		/* Header */
 		header {
-			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-			padding-bottom: 2rem;
-			margin-bottom: 2rem;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			gap: 1.5rem;
+			padding-bottom: 3rem;
+			margin-bottom: 2.5rem;
+			border-bottom: 1px solid var(--border);
 		}
 
-		.social-links {
-			display: flex;
-			justify-content: center;
-			gap: 2rem;
-			margin-top: 5rem;
-			margin-bottom: 2rem;
+		.eyebrow {
+			font-family: var(--font-mono);
+			font-size: 0.8rem;
+			color: var(--accent);
+			letter-spacing: 0.04em;
+			margin-bottom: 0.75rem;
 		}
 
-		.social-links a {
-			text-decoration: none;
-		}
-
-		.social-links img {
-			width: 32px;
-			height: 32px;
-			opacity: 0.8;
-			transition: opacity 0.2s ease;
-			filter: brightness(0) invert(1);
-		}
-
-		.social-links a:hover img {
-			opacity: 1;
+		.subtitle {
+			font-size: 1.1rem;
+			color: var(--text-secondary);
+			line-height: 1.7;
+			font-weight: 400;
 		}
 
 		.header-cta {
 			display: flex;
-			gap: 1rem;
-			flex-shrink: 0;
+			gap: 0.75rem;
+			margin-top: 2rem;
 		}
 
 		.cta-button {
 			display: inline-block;
-			padding: 0.65rem 1.25rem;
+			padding: 0.6rem 1.4rem;
 			border-radius: 8px;
 			text-decoration: none;
 			font-weight: 600;
-			font-size: 0.9rem;
+			font-size: 0.85rem;
 			transition: all 0.2s ease;
-			border: 2px solid var(--text-color);
-			line-height: 1.2;
-		}
-
-		.cta-button {
-			background-color: var(--text-color);
-			color: var(--bg-color);
+			border: 1.5px solid var(--accent);
+			background: var(--accent);
+			color: var(--bg-primary);
+			letter-spacing: 0.01em;
 		}
 
 		.cta-button:hover {
-			background-color: transparent;
-			color: var(--text-color);
-			text-decoration: none;
+			background: transparent;
+			color: var(--accent);
 		}
 
 		.cta-button-secondary {
-			background-color: transparent;
-			color: var(--text-color);
+			background: transparent;
+			color: var(--text-primary);
+			border-color: var(--border);
 		}
 
 		.cta-button-secondary:hover {
-			background-color: var(--text-color);
-			color: var(--bg-color);
+			border-color: var(--accent);
+			color: var(--accent);
+			background: var(--accent-subtle);
+		}
+
+		/* Projects */
+		.projects-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+		}
+
+		.projects-container article {
+			background: var(--bg-card);
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			padding: 1.75rem;
+			display: flex;
+			flex-direction: column;
+			transition: all 0.25s ease;
+			position: relative;
+		}
+
+		.projects-container article:hover {
+			background: var(--bg-card-hover);
+			border-color: rgba(255, 255, 255, 0.1);
+			transform: translateY(-2px);
+		}
+
+		/* Featured project */
+		.projects-container article.featured {
+			grid-column: 1 / -1;
+			background: var(--bg-featured);
+			border-color: rgba(139, 124, 247, 0.2);
+			padding: 2rem;
+		}
+
+		.projects-container article.featured:hover {
+			border-color: rgba(139, 124, 247, 0.35);
+			box-shadow: 0 8px 32px var(--accent-glow);
+		}
+
+		.featured-label {
+			font-family: var(--font-mono);
+			font-size: 0.7rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: var(--accent);
+			margin-bottom: 0.75rem;
+		}
+
+		.year {
+			display: inline-block;
+			font-family: var(--font-mono);
+			font-size: 0.75rem;
+			color: var(--text-secondary);
+			margin-bottom: 0.75rem;
+		}
+
+		.projects-container article p {
+			color: var(--text-secondary);
+			font-size: 0.925rem;
+			line-height: 1.65;
+		}
+
+		.projects-container article:last-child:nth-child(even) {
+			grid-column: 1;
+		}
+
+		.tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.4rem;
+			margin: 1rem 0;
+		}
+
+		.tag {
+			font-family: var(--font-mono);
+			background: var(--accent-subtle);
+			color: var(--accent);
+			padding: 0.2rem 0.6rem;
+			border-radius: 4px;
+			font-size: 0.7rem;
+			font-weight: 400;
+			letter-spacing: 0.02em;
+			opacity: 0.75;
+		}
+
+		.inline-code {
+			font-family: var(--font-mono);
+			color: var(--accent);
+			font-size: 0.9em;
+		}
+
+		.links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.25rem;
+			margin-top: auto;
+			padding-top: 0.5rem;
+		}
+
+		.links a {
+			font-size: 0.85rem;
+			font-weight: 500;
+			color: var(--accent);
 			text-decoration: none;
+			transition: color 0.2s ease;
+		}
+
+		.links a:hover {
+			color: var(--text-primary);
+		}
+
+		.note {
+			font-style: italic;
+			font-size: 0.8rem;
+			color: var(--text-secondary);
+			opacity: 0.5;
+			margin-top: auto;
+			padding-top: 0.5rem;
+		}
+
+		/* Skills — compact inline layout */
+		.skills-inline {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 2rem;
+		}
+
+		.skill-group h3 {
+			font-family: var(--font-mono);
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+			color: var(--accent);
+			margin-bottom: 0.5rem;
+		}
+
+		.skill-group p {
+			color: var(--text-secondary);
+			font-size: 0.9rem;
+			line-height: 1.8;
+		}
+
+		/* Footer */
+		.social-links {
+			display: flex;
+			justify-content: center;
+			gap: 1.5rem;
+			padding: 2rem 0 3rem;
+			border-top: 1px solid var(--border);
+		}
+
+		.social-links a {
+			text-decoration: none;
+			opacity: 0.4;
+			transition: opacity 0.2s ease;
+		}
+
+		.social-links a:hover {
+			opacity: 1;
+		}
+
+		.social-links img {
+			width: 28px;
+			height: 28px;
+			filter: brightness(0) invert(1);
+		}
+
+		/* Responsive */
+		@media (max-width: 640px) {
+			body {
+				padding: 1.25rem;
+			}
+
+			h1 {
+				font-size: 2.25rem;
+			}
+
+			.projects-container {
+				grid-template-columns: 1fr;
+			}
+
+			.projects-container article.featured {
+				grid-column: 1;
+			}
+
+			.header-cta {
+				flex-wrap: wrap;
+			}
 		}
 
 		@media (min-width: 768px) {
 			body {
 				padding: 3rem;
 			}
-			.tools-grid {
+
+			.skills-inline {
 				grid-template-columns: 1fr 1fr 1fr;
 			}
 		}
 
-		.about p:first-child {
-			margin-bottom: 0.4rem;
+		/* Subtle entrance animation */
+		@keyframes fadeUp {
+			from {
+				opacity: 0;
+				transform: translateY(12px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		header {
+			animation: fadeUp 0.5s ease both;
+		}
+
+		.projects {
+			animation: fadeUp 0.5s ease 0.1s both;
+		}
+
+		.tools {
+			animation: fadeUp 0.5s ease 0.2s both;
+		}
+
+		.social-links {
+			animation: fadeUp 0.5s ease 0.3s both;
+		}
+
+		.footer-email {
+			font-family: var(--font-mono);
+			font-size: 0.8rem;
+			color: var(--text-secondary);
+			opacity: 0.6;
+			align-self: center;
+		}
+
+		.projects-container article[role="link"] {
+			cursor: pointer;
+		}
+
+		.projects-container article[role="link"]:focus-visible {
+			outline: 2px solid var(--accent);
+			outline-offset: 2px;
 		}
 	</style>
 </html>
