@@ -619,13 +619,13 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 		</div>
 		<script>
 			document
-				.querySelectorAll(".projects-container article .links a")
-				.forEach((a) => {
-					a.addEventListener("click", (e) => e.stopPropagation());
-				});
-			document
 				.querySelectorAll(".projects-container article[role='link']")
 				.forEach((article) => {
+					// Stop link clicks from also triggering the card's onclick
+					article.querySelectorAll(".links a").forEach((a) => {
+						a.addEventListener("click", (e) => e.stopPropagation());
+					});
+					// Enable keyboard navigation (Enter/Space) on cards
 					article.addEventListener("keydown", (e) => {
 						const event = e as KeyboardEvent;
 						if (event.key === "Enter" || event.key === " ") {
