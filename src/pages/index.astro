@@ -179,102 +179,6 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 				gap: 1rem;
 			}
 
-			.projects-container article {
-				background: var(--bg-card);
-				border: 1px solid var(--border);
-				border-radius: 12px;
-				padding: 1.75rem;
-				display: flex;
-				flex-direction: column;
-				transition: all 0.25s ease;
-				position: relative;
-			}
-
-			.projects-container article[role="link"]:hover {
-				background: var(--bg-card-hover);
-				border-color: rgba(255, 255, 255, 0.1);
-				transform: translateY(-2px);
-			}
-
-			/* Featured project */
-			.projects-container article.featured {
-				grid-column: 1 / -1;
-				background: var(--bg-featured);
-				border-color: rgba(139, 124, 247, 0.2);
-				padding: 2rem;
-			}
-
-			.projects-container article.featured:hover {
-				border-color: rgba(139, 124, 247, 0.35);
-				box-shadow: 0 8px 32px var(--accent-glow);
-			}
-
-			.featured-label {
-				font-family: var(--font-mono);
-				font-size: 0.7rem;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
-				color: var(--accent);
-				margin-bottom: 0.75rem;
-			}
-
-			.year {
-				display: inline-block;
-				font-family: var(--font-mono);
-				font-size: 0.75rem;
-				color: var(--text-secondary);
-				margin-bottom: 0.75rem;
-			}
-
-			.projects-container article p {
-				color: var(--text-secondary);
-				font-size: 0.925rem;
-				line-height: 1.65;
-			}
-
-			.projects-container article:last-child:nth-child(even) {
-				grid-column: 1;
-			}
-
-			.tags {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.4rem;
-				margin: 1rem 0;
-			}
-
-			.tag {
-				font-family: var(--font-mono);
-				background: var(--accent-subtle);
-				color: var(--accent);
-				padding: 0.2rem 0.6rem;
-				border-radius: 4px;
-				font-size: 0.75rem;
-				font-weight: 400;
-				letter-spacing: 0.02em;
-				opacity: 0.75;
-			}
-
-			.links {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 1.25rem;
-				margin-top: auto;
-				padding-top: 0.5rem;
-			}
-
-			.links a {
-				font-size: 0.85rem;
-			}
-
-			.note {
-				font-style: italic;
-				font-size: 0.8rem;
-				color: var(--text-secondary);
-				opacity: 0.5;
-				margin-top: auto;
-				padding-top: 0.5rem;
-			}
 
 			/* Skills — compact inline layout */
 			.skills-inline {
@@ -336,10 +240,6 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 					grid-template-columns: 1fr;
 				}
 
-				.projects-container article.featured {
-					grid-column: 1;
-				}
-
 				.header-cta {
 					flex-wrap: wrap;
 				}
@@ -391,14 +291,7 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 				align-self: center;
 			}
 
-			.projects-container article[role="link"] {
-				cursor: pointer;
-			}
 
-			.projects-container article[role="link"]:focus-visible {
-				outline: 2px solid var(--accent);
-				outline-offset: 2px;
-			}
 		</style>
 	</head>
 	<body>
