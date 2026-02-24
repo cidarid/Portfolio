@@ -236,9 +236,19 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 				.forEach((a) => {
 					a.addEventListener("click", (e) => e.stopPropagation());
 				});
+			document
+				.querySelectorAll(".projects-container article[role='link']")
+				.forEach((article) => {
+					article.addEventListener("keydown", (e) => {
+						const event = e as KeyboardEvent;
+						if (event.key === "Enter" || event.key === " ") {
+							e.preventDefault();
+							(article as HTMLElement).click();
+						}
+					});
+				});
 		</script>
 	</body>
-
 	<style is:global>
 		:root {
 			--bg-primary: #0f0f13;
@@ -470,12 +480,6 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 			font-weight: 400;
 			letter-spacing: 0.02em;
 			opacity: 0.75;
-		}
-
-		.inline-code {
-			font-family: var(--font-mono);
-			color: var(--accent);
-			font-size: 0.9em;
 		}
 
 		.links {
