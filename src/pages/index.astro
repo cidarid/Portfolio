@@ -1,5 +1,7 @@
 ---
 // src/pages/index.astro
+import ProjectCard from "../components/ProjectCard.astro";
+
 const pageTitle = "Spencer Fletcher | Software Engineer";
 ---
 
@@ -440,130 +442,53 @@ const pageTitle = "Spencer Fletcher | Software Engineer";
 					<h2>Projects</h2>
 
 					<div class="projects-container">
-						<article
-							class="featured"
-							onclick="window.open('https://github.com/cidarid/MemoryGuard', '_blank')"
-							role="link"
-							tabindex="0"
-						>
-							<div class="featured-label">Featured</div>
-							<h3>MemoryGuard</h3>
-							<span class="year">2024</span>
-							<p>
-								A Clang/LLVM-based memory safety tool for C programs. Combines
-								static instrumentation with dynamic runtime analysis to detect
-								dangling pointers, memory leaks, and double-frees, generating
-								annotated, syntax-highlighted error reports with precise source
-								locations.
-							</p>
-							<div class="tags">
-								<span class="tag">C++</span>
-								<span class="tag">Clang/LLVM</span>
-								<span class="tag">CMake</span>
-								<span class="tag">Python</span>
-							</div>
-							<div class="links">
-								<a target="_blank" href="https://github.com/cidarid/MemoryGuard"
-									>View Code →</a
-								>
-							</div>
-						</article>
+						<ProjectCard
+							featured
+							title="MemoryGuard"
+							year="2024"
+							description="A Clang/LLVM-based memory safety tool for C programs. Combines static instrumentation with dynamic runtime analysis to detect dangling pointers, memory leaks, and double-frees, generating annotated, syntax-highlighted error reports with precise source locations."
+							tags={["C++", "Clang/LLVM", "CMake", "Python"]}
+							links={[{ label: "View Code →", href: "https://github.com/cidarid/MemoryGuard" }]}
+							href="https://github.com/cidarid/MemoryGuard"
+						/>
 
-						<article
-							onclick="window.open('https://cps.med.ubc.ca/body-donation/', '_blank')"
-							role="link"
-							tabindex="0"
-						>
-							<h3>UBC Cadaver Donation Website</h3>
-							<span class="year">2022-2023</span>
-							<p>
-								Redesigned UBC's Cadaver Donation Program webpage, driving a
-								<strong>100%+ increase in donations</strong>. Also overhauled a
-								staff directory serving hundreds of users, improving
-								<strong>search speed by 250%</strong>.
-							</p>
-							<div class="tags">
-								<span class="tag">HTML</span>
-								<span class="tag">CSS</span>
-								<span class="tag">JavaScript</span>
-								<span class="tag">WordPress</span>
-							</div>
-							<div class="links">
-								<a
-									target="_blank"
-									href="https://github.com/cidarid/body-donation-site"
-									>View Code →</a
-								>
-								<a target="_blank" href="https://cps.med.ubc.ca/body-donation/"
-									>Live Project →</a
-								>
-							</div>
-						</article>
+						<ProjectCard
+							title="UBC Cadaver Donation Website"
+							year="2022-2023"
+							description='Redesigned UBC&apos;s Cadaver Donation Program webpage, driving a <strong>100%+ increase in donations</strong>. Also overhauled a staff directory serving hundreds of users, improving <strong>search speed by 250%</strong>.'
+							tags={["HTML", "CSS", "JavaScript", "WordPress"]}
+							links={[
+								{ label: "View Code →", href: "https://github.com/cidarid/body-donation-site" },
+								{ label: "Live Project →", href: "https://cps.med.ubc.ca/body-donation/" },
+							]}
+							href="https://cps.med.ubc.ca/body-donation/"
+						/>
 
-						<article
-							onclick="window.open('https://github.com/cidarid/RecipeBook', '_blank')"
-							role="link"
-							tabindex="0"
-						>
-							<h3>Collaborative Recipe Book</h3>
-							<span class="year">In Development</span>
-							<p>
-								A full-stack recipe platform with <strong
-									>Git-style version control</strong
-								> for tracking recipe modifications and forking others' recipes. Built
-								with SvelteKit and PostgreSQL, featuring user auth, image storage,
-								and a public feed.
-							</p>
-							<div class="tags">
-								<span class="tag">SvelteKit</span>
-								<span class="tag">PostgreSQL</span>
-								<span class="tag">TypeScript</span>
-							</div>
-							<div class="links">
-								<a target="_blank" href="https://github.com/cidarid/RecipeBook"
-									>View Code →</a
-								>
-							</div>
-						</article>
+						<ProjectCard
+							title="Collaborative Recipe Book"
+							year="In Development"
+							description='A full-stack recipe platform with <strong>Git-style version control</strong> for tracking recipe modifications and forking others&apos; recipes. Built with SvelteKit and PostgreSQL, featuring user auth, image storage, and a public feed.'
+							tags={["SvelteKit", "PostgreSQL", "TypeScript"]}
+							links={[{ label: "View Code →", href: "https://github.com/cidarid/RecipeBook" }]}
+							href="https://github.com/cidarid/RecipeBook"
+						/>
 
-						<article
-							onclick="window.open('https://github.com/cidarid/RemoteControl', '_blank')"
-							role="link"
-							tabindex="0"
-						>
-							<h3>Remote Control Mobile App</h3>
-							<span class="year">In Development</span>
-							<p>
-								A Swift iOS app that turns your phone into a remote input device
-								for desktop control — supporting mouse, media, and presentation
-								control over a local network.
-							</p>
-							<div class="tags">
-								<span class="tag">Swift</span>
-								<span class="tag">iOS</span>
-							</div>
-							<div class="links">
-								<a
-									target="_blank"
-									href="https://github.com/cidarid/RemoteControl">View Code →</a
-								>
-							</div>
-						</article>
+						<ProjectCard
+							title="Remote Control Mobile App"
+							year="In Development"
+							description="A Swift iOS app that turns your phone into a remote input device for desktop control — supporting mouse, media, and presentation control over a local network."
+							tags={["Swift", "iOS"]}
+							links={[{ label: "View Code →", href: "https://github.com/cidarid/RemoteControl" }]}
+							href="https://github.com/cidarid/RemoteControl"
+						/>
 
-						<article>
-							<h3>Hollywood Theatre Automation</h3>
-							<span class="year">2024 · Freelance</span>
-							<p>
-								Built tooling for the Hollywood Theatre in Vancouver — a
-								web-based marquee letter tracker and a tip-splitting system,
-								saving <strong>5+ hours of manual work weekly</strong>.
-							</p>
-							<div class="tags">
-								<span class="tag">JavaScript</span>
-								<span class="tag">Google Apps Script</span>
-							</div>
-							<p class="note">Source unavailable — client project.</p>
-						</article>
+						<ProjectCard
+							title="Hollywood Theatre Automation"
+							year="2024 · Freelance"
+							description='Built tooling for the Hollywood Theatre in Vancouver — a web-based marquee letter tracker and a tip-splitting system, saving <strong>5+ hours of manual work weekly</strong>.'
+							tags={["JavaScript", "Google Apps Script"]}
+							note="Source unavailable — client project."
+						/>
 					</div>
 				</section>
 

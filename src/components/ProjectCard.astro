@@ -1,0 +1,42 @@
+---
+interface Props {
+	title: string;
+	year: string;
+	description: string;
+	tags: string[];
+	links?: { label: string; href: string }[];
+	href?: string;
+	featured?: boolean;
+	note?: string;
+}
+
+const { title, year, description, tags, links, href, featured, note } =
+	Astro.props;
+---
+
+<article
+	class:list={[{ featured }]}
+	onclick={href && `window.open('${href}', '_blank')`}
+	role={href ? "link" : undefined}
+	tabindex={href ? "0" : undefined}
+>
+	{featured && <div class="featured-label">Featured</div>}
+	<h3>{title}</h3>
+	<span class="year">{year}</span>
+	<p set:html={description} />
+	<div class="tags">
+		{tags.map((tag) => <span class="tag">{tag}</span>)}
+	</div>
+	{
+		links && links.length > 0 && (
+			<div class="links">
+				{links.map((link) => (
+					<a target="_blank" href={link.href}>
+						{link.label}
+					</a>
+				))}
+			</div>
+		)
+	}
+	{note && <p class="note">{note}</p>}
+</article>
