@@ -1,5 +1,106 @@
-<a
-	href="https://common-arrow-6e2.notion.site/Recipes-31b99dd0d60a802ab0bdd8b6b46910bd"
->
-	Recipes
-</a>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Links</title>
+		<link rel="icon" type="image/png" href="/logo.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--bg: #0f0f13;
+				--text: #f0eff4;
+				--text-muted: #a09fb1;
+				--accent: #8b7cf7;
+				--border: rgba(255, 255, 255, 0.1);
+				--card: #1a1a23;
+			}
+
+			* {
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				background: var(--bg);
+				color: var(--text);
+				font-family:
+					"DM Sans",
+					-apple-system,
+					sans-serif;
+				min-height: 100dvh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 2rem;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			.wrapper {
+				width: 100%;
+				max-width: 380px;
+			}
+
+			h1 {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: var(--text-muted);
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				margin-bottom: 1.75rem;
+			}
+
+			.links {
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+
+			.links a {
+				display: block;
+				padding: 0.9rem 1.25rem;
+				background: var(--card);
+				border: 1px solid var(--border);
+				border-radius: 10px;
+				color: var(--text);
+				text-decoration: none;
+				font-size: 0.95rem;
+				font-weight: 500;
+				transition:
+					border-color 0.15s ease,
+					background 0.15s ease;
+			}
+
+			.links a:hover {
+				border-color: var(--accent);
+				background: #22222e;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Links</h1>
+			<div class="links">
+				<a
+					href="https://common-arrow-6e2.notion.site/Recipes-31b99dd0d60a802ab0bdd8b6b46910bd"
+				>
+					Recipes
+				</a>
+				<a
+					href="https://common-arrow-6e2.notion.site/Recipes-31b99dd0d60a802ab0bdd8b6b46910bd"
+				>
+					Transition Checklist
+				</a>
+				<a
+					href="https://common-arrow-6e2.notion.site/Recipes-31b99dd0d60a802ab0bdd8b6b46910bd"
+				>
+					Closing Checklist
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
